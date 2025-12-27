@@ -134,8 +134,16 @@ CORS_ALLOW_ALL_ORIGINS = True  # simple, allows all
 # OR, restrict to your RN / frontend URLs:
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:19006",
-    "https://agrisenseb.onrender.com",
+    "https://192.168.254.200",
     "exp://192.168.229.51:19000",
 ]
+
+# settings.py
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=365*10),  # 10 years!
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=365*10),
+    "ROTATE_REFRESH_TOKENS": False,
+}
+
 
 
